@@ -263,39 +263,16 @@ const app = {
                     }
                 }
 
-                // let mathRemainMinutes = totalMinutes - currentMinutes;
-
                 let mathRemainMinutes = totalMinutes - borrowMinutes;
 
                 let mathRemainSeconds = totalSeconds + borrowMinutes * 60 - currentSeconds;
+        
 
-                console.log('currentSeconds:' + currentSeconds);
-                console.log('borrowMinutes:' + borrowMinutes);
-                console.log('mathRemainMinutes:' + mathRemainMinutes);
-                console.log('mathRemainSeconds:' + mathRemainSeconds);
-
-                // console.log(currentMinutes);
-
-                // console.log(mathRemainSeconds);
-
-                // if (mathRemainSeconds < 0) {
-                //     totalSeconds = 59;
-                //     mathRemainSeconds = 59;
-                //     console.log(123)
-                //     borrowMinutes++;
-                // }
-
-                
-
-                const textEnd = mathRemainMinutes + ':' + (mathRemainSeconds <= 9 ?  '0' + mathRemainSeconds : mathRemainSeconds)
+                const textEnd = '-' + mathRemainMinutes + ':' + (mathRemainSeconds <= 9 ?  '0' + mathRemainSeconds : mathRemainSeconds)
 
                 timePlayingBegin.textContent = textBegin;
                 timePlayingEnd.textContent = textEnd;
 
-                // console.log(totalSeconds);
-                // console.log(remainSeconds);
-                // console.log(mathRemainMinutes);
-                // console.log(mathRemainSeconds);
             }
 
         }
