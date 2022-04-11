@@ -188,7 +188,7 @@ const app = {
         imgSongPlaying.style = `background-image: url(${currentSong.image});`;
         nameSongPlaying.textContent = currentSong.name;
         singerSongPlaying.textContent = currentSong.singer;
-        timePlayingEnd.textContent = currentSong.time;
+        timePlayingEnd.textContent = '-' + currentSong.time;
         document.querySelector('.single-played.active').classList.remove('active');
         document.querySelectorAll('.single-played')[this.currentIndex].classList.add('active');
     },
